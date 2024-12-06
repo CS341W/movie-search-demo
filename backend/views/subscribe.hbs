@@ -1,0 +1,22 @@
+<h1>Add a Subscriber</h1>
+<form
+  name="subscribe-form"
+  class="subscribe-form"
+  method="POST"
+  target="_self"
+  action="/subscribers/create"
+  enctype="multipart/form-data"
+>
+  <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+
+  <div class="row">
+    <input type="text" name="fname" placeholder="First Name" required />
+    <input type="text" name="lname" placeholder="Last Name" required /></div>
+  <div class="row">
+    <label for="avatar">
+      Avatar Image
+    </label>
+    <input type="file" id="avatar" name="avatar" />
+  </div>
+  <button type="submit">Add</button>
+</form>
