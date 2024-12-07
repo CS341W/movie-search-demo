@@ -13,6 +13,7 @@ const App = () => {
     try {
       const apiHost =
         import.meta.env.VITE_BACKEND_API_HOST || "http://localhost:3000"
+      console.log(apiHost)
       const response = await fetch(
         `${apiHost}/api/movies?title=${encodeURIComponent(
           title
