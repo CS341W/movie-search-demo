@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+const apiHost = import.meta.env.VITE_BACKEND_API_HOST || "http://localhost:3000"
 
 const App = () => {
   const [title, setTitle] = useState("")
@@ -9,11 +10,7 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     try {
-      const apiHost =
-        import.meta.env.VITE_BACKEND_API_HOST || "http://localhost:3000"
-      console.log(apiHost)
       const response = await fetch(
         `${apiHost}/api/movies?title=${encodeURIComponent(
           title
@@ -39,7 +36,7 @@ const App = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
-              for="title"
+              htmlFor="title"
               className="block text-sm font-medium text-gray-700"
             >
               Movie Title:
@@ -55,7 +52,7 @@ const App = () => {
           </div>
           <div>
             <label
-              for="year"
+              htmlFor="year"
               className="block text-sm font-medium text-gray-700"
             >
               Year:
