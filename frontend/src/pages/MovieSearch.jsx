@@ -11,10 +11,7 @@ const App = () => {
     e.preventDefault()
 
     try {
-      const apiHost =
-        process.env.NODE_ENV === "production"
-          ? process.env.BACKEND_API_HOST
-          : "http://localhost:3000"
+      const apiHost = process.env.NODE_ENV || "http://localhost:3000"
       const response = await fetch(
         `${apiHost}/api/movies?title=${encodeURIComponent(
           title
