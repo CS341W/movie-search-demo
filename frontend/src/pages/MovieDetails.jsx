@@ -23,7 +23,7 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+    <div className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
       <h2 className="text-3xl font-bold mb-4">
         {movie.Title} ({movie.Year})
       </h2>
