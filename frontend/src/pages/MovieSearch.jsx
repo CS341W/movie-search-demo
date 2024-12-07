@@ -38,12 +38,15 @@ const App = () => {
         <h1 className="text-2xl font-bold mb-6 text-center">Movie Search</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              for="title"
+              className="block text-sm font-medium text-gray-700"
+            >
               Movie Title:
             </label>
             <input
               type="text"
-              name="title"
+              id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
@@ -51,12 +54,15 @@ const App = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              for="year"
+              className="block text-sm font-medium text-gray-700"
+            >
               Year:
             </label>
             <input
               type="text"
-              name="year"
+              id="year"
               value={year}
               onChange={(e) => setYear(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
